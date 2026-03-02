@@ -1,53 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Troca de Livros Usados</title>
-    <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Promoção Super Prêmios 2025 | Site Oficial</title>
+<link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
 
-    <header>
-        <h1>Troca de Livros Usados</h1>
-        <p>Encontre, troque e descubra novas histórias!</p>
-    </header>
+<div class="top-bar">
+    <span>Certificado de Autorização SECAP/ME Nº 01.004321/2025</span>
+    <span>Dúvidas? sac@superpromo.com.br</span>
+</div>
 
-    <main>
-        <h2>Livros disponíveis para troca</h2>
+<header>
+    <a href="#" class="logo">🎁 SuperPromo</a>
+    <nav>
+        <ul>
+            <li><a onclick="scrollToForm()">Participar</a></li>
+            <li><a href="#">Prêmios</a></li>
+            <li><a onclick="abrirRegulamento()">Regulamento</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <div class="livros-container">
-            <div class="livro">
-                <a href="livro1.html">
-                    <img src="image/pequeno principe.jpg" alt="Capa do livro O Pequeno Príncipe">
-                    <h3>O Pequeno Príncipe</h3>
-                </a>
-            </div>
+<section class="hero">
+    <h1>SUA SORTE ESTÁ AQUI!</h1>
+    <p>Concorra a 1 Smartphone de última geração e R$ 5.000 em vales-compra.</p>
+    <button onclick="scrollToForm()">CADASTRE-SE AGORA</button>
+</section>
 
-            <div class="livro">
-                <a href="livro2.html">
-                    <img src="image/dom casmurro.jpg" alt="Capa do livro Dom Casmurro">
-                    <h3>Dom Casmurro</h3>
-                </a>
-            </div>
-            <div class="livro">
-                <a href="livro3.html">
-                    <img src="image/fodase.jpg" alt="Capa do livro Dom Casmurro">
-                    <h3>a sutil arte de ligar o foda-se</h3>
-                </a>
-            </div>
-            <div class="livro">
-                <a href="livro4.html">
-                    <img src="image/biblia.jpg" alt="Capa do livro Dom Casmurro">
-                    <h3>biblia sagrada</h3>
-                </a>
-            </div>
+<section id="cadastro" style="padding: 60px 10%; text-align: center; background: #fff;">
+    <h2>Formulário de Inscrição</h2>
+    <form id="promoForm" style="max-width: 450px; margin: 0 auto; text-align: left; border: 1px solid #ddd; padding: 30px; border-radius: 15px;">
+        <label>Nome Completo</label>
+        <input type="text" id="nome" required minlength="3" style="width:100%; padding:12px; margin: 10px 0 20px; box-sizing: border-box;">
+
+        <label>Email</label>
+        <input type="email" id="email" required style="width:100%; padding:12px; margin: 10px 0 20px; box-sizing: border-box;">
+
+        <label>CPF</label>
+        <input type="text" id="cpf" required placeholder="000.000.000-00" style="width:100%; padding:12px; margin: 10px 0 20px; box-sizing: border-box;">
+
+        <label>Código de Barras</label>
+        <input type="text" id="codigo" placeholder="Digite 00154321" required style="width:100%; padding:12px; margin: 10px 0 5px; box-sizing: border-box;">
+        <small style="color: #666; font-size: 11px;">*Mínimo 8 dígitos para validar.</small>
+
+        <button type="submit" style="width:100%; padding:15px; background:#28a745; color:white; border:none; border-radius:5px; margin-top:20px; font-size:16px; font-weight:bold; cursor:pointer;">ENVIAR MEU CUPOM</button>
+    </form>
+</section>
+
+<div id="modalRegulamento" class="modal-reg">
+    <div class="reg-content">
+        <span class="close-reg" onclick="fecharRegulamento()">&times;</span>
+        <h2>Regulamento da Promoção</h2>
+        <div class="reg-text">
+            <h3>1. ELEGIBILIDADE</h3>
+            <p>Poderão participar todas as pessoas físicas, maiores de 18 anos, residentes no território nacional.</p>
+            
+            <h3>2. PERÍODO DA PROMOÇÃO</h3>
+            <p>A promoção é válida de 01/01/2025 a 31/12/2025.</p>
+            
+            <h3>3. COMO PARTICIPAR</h3>
+            <p>O consumidor deverá adquirir qualquer produto da linha SuperPromo e cadastrar o código de barras de 8 dígitos no site oficial. Cada código dá direito a um número da sorte.</p>
+            
+            <h3>4. PREMIAÇÃO</h3>
+            <p>Serão sorteados: 01 Smartphone topo de linha e 10 Vales-Compras no valor de R$ 500,00 cada.</p>
+            
+            <h3>5. SORTEIO</h3>
+            <p>O sorteio será realizado com base na extração da Loteria Federal do dia 10 de janeiro de 2026.</p>
+            
+            <h3>6. DISPOSIÇÕES GERAIS</h3>
+            <p>O prêmio é pessoal e intransferível e não poderá ser trocado por dinheiro.</p>
         </div>
-    </main>
+        <button onclick="fecharRegulamento()" style="margin-top:20px; padding:10px 20px; background:#333; color:white; border:none; border-radius:5px; cursor:pointer;">Entendi</button>
+    </div>
+</div>
 
-    <footer>
-        <p>Site criado para o professor baumann - 2025</p>
-    </footer>
+<div id="modal" class="modal" style="display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8);">
+    <div style="background-color: white; margin: 15% auto; padding: 30px; border-radius: 15px; width: 80%; max-width: 400px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.3);">
+        <h2 style="color: #28a745;">🎉 SUCESSO!</h2>
+        <p>Seu código foi validado e você já está participando.</p>
+        <button onclick="fecharModal()" style="background-color: #28a745; color: white; border: none; padding: 10px 25px; cursor: pointer; border-radius: 5px; font-weight: bold;">FECHAR</button>
+    </div>
+</div>
 
+<footer style="background:#222; color:#fff; padding: 40px 10%; text-align:center; font-size: 14px;">
+    <p>© 2025 SuperPromo Indústria S.A. Todos os direitos reservados.</p>
+    <p>Bebeu? Não dirija. Promoção para maiores de 18 anos.</p>
+</footer>
+
+<script>
+    function abrirRegulamento() {
+        document.getElementById("modalRegulamento").style.display = "block";
+    }
+    function fecharRegulamento() {
+        document.getElementById("modalRegulamento").style.display = "none";
+    }
+    // Fecha o regulamento se clicar fora dele
+    window.onclick = function(event) {
+        let mod = document.getElementById("modalRegulamento");
+        if (event.target == mod) { fecharRegulamento(); }
+    }
+</script>
+
+<script src="script.js"></script>
 </body>
 </html>
